@@ -35,7 +35,9 @@ public:
 		Node* currentNode = NULL;
 		search(element, parent, currentNode); //Locate the node which will be the parent of node to be inserted
 
-		
+		if (parent == NULL)//if the parent is null (Tree is empty)
+		{
+		}
 	}
 
 	void search(string element, Node*& parent, Node*& currentNode) {//this fuction searches the currentNODE of the specified Node as well as the current Node of its parent
