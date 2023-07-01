@@ -40,6 +40,10 @@ public:
 			ROOT = newNode;
 			return; //Exit
 		}
+		if (element < parent->info) // If the value in the data field of the new node is less than that of the
+		{
+			parent->leftchild = newNode; // Make the left child of the parent poin to the newnode
+		}
 	}
 
 	void search(string element, Node*& parent, Node*& currentNode) {//this fuction searches the currentNODE of the specified Node as well as the current Node of its parent
