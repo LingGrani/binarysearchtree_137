@@ -37,6 +37,8 @@ public:
 
 		if (parent == NULL)//if the parent is null (Tree is empty)
 		{
+			ROOT = newNode;
+			return; //Exit
 		}
 	}
 
