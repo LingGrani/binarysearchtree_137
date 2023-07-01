@@ -31,5 +31,10 @@ public:
 		newNode->leftchild = NULL; // Make leftchild NULL
 		newNode->rightchild = NULL;// Make rightchild NULL
 
+		Node* parent = NULL;
+		Node* currentNode = NULL;
+		search(element, parent, currentNode); //Locate the node which will be the parent of node to be inserted
+
+		
 	}
 };
