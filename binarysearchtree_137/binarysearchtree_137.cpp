@@ -45,8 +45,8 @@ public:
 			ROOT = newNode;
 			return; //Exit
 		}
-		if (element == parent->info)
-			return;
+		/*if (element == parent->info) ketika element yang dimasukan sama, keluar dari insertion
+			return;*/
 		if (element < parent->info) // If the value in the data field of the new node is less than that of the 
 		{
 			parent->leftchild = newNode; // Make the left child of the parent poin to the newnode
@@ -59,18 +59,18 @@ public:
 	void search(string element, Node*& parent, Node*& currentNode) {//this fuction searches the currentNODE of the specified Node as well as the current Node of its parent
 		currentNode = ROOT;
 		parent = NULL;
-		while ((currentNode != NULL)) {
+		while ((currentNode != NULL) && (currentNode->info != element) /*   <- Ditambahkkan Kembali  */) {
 			parent = currentNode;
-			if (currentNode->info == element) {
+			/*if (currentNode->info == element) { ketika element sudah ada keluar dari loop
 				cout << "Element sudah ada\nTidak dapat dimasukan" << endl;
 				break;
-			}
-			else {
+			}*/
+			/*else {*/ //BUG FIXS
 				if (element < currentNode->info)
 					currentNode = currentNode->leftchild;
 				else
 					currentNode = currentNode->rightchild;
-			}
+			/*}*/
 		}
 	}
 
