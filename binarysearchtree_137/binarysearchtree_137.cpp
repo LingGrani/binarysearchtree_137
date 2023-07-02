@@ -2,6 +2,11 @@
 #include <string>
 using namespace std;
 
+//	CAUTION BUG!!!
+//
+//	Terjadi Ketika info yang dimasukan sudah ada pada binarytree
+
+
 class Node {
 public:
 	string info;
